@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "src/app/api/tiles/[z]/[x]/[y]/route.ts": {
+      "maxDuration": 60
+    }
+  }
+}

@@ -78,7 +78,7 @@ export function fetchAndCache(url: string, tilePath: string): Promise<void> {
       });
     });
 
-    req.setTimeout(120_000, () => {
+    req.setTimeout(55_000, () => {
       req.destroy();
       cleanup();
       reject(new Error('WMS fetch timed out'));
