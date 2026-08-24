@@ -3,7 +3,9 @@ import http from 'http';
 import https from 'https';
 import path from 'path';
 
-export const TILE_ROOT = path.join(process.cwd(), '..', 'map', 'public', 'tiles');
+export const TILE_ROOT = process.env.VERCEL
+  ? '/tmp/tiles'
+  : path.join(process.cwd(), '..', 'map', 'public', 'tiles');
 
 const PREFETCH_ZOOM_LEVELS = [13, 14, 15];
 const PREFETCH_CONCURRENCY = 2;
