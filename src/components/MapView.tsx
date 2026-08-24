@@ -130,7 +130,7 @@ export default function MapView() {
             'BUPI — Parcelas Cadastrais': bupiCadastro,
             'BUPI — Ortofotos 2018': bupiOrtos,
           },
-          { collapsed: false },
+          { collapsed: true },
         )
         .addTo(map);
 
