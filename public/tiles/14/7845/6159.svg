@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xml:space="preserve" id="gwmroot" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmwmsvg="http://www.intergraph.com/GeoMedia/wmsvg" style="stroke-linejoin:round">
+<script type="text/javascript" id="gwmlegendscript"><![CDATA[
+var _GWMLegendDisplayOrder = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", locatable :true, leaf : true, hotspot : false, members : [
+]}
+];
+var _GWMLegendGroup = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", members : [
+]}
+];
+]]></script>
+<defs id="gwmdefs">
+<image width="256" height="256" id="ICNyvHxbb" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASaSURBVHhe7d1bihsxEEDR7H/B855xqEAFYeyQ777ngEg2oDuSWt3+dQOyBADCBACCfn5+/gwBgIiZ8Ov7+/v29fUlAFA0k//t7U0AoOJcAXx+ft5eX18FAIo+Pj4EAIpm/z/Lf1sACJr9//z1f39/FwCo2b/+VgAQJAAQNfv/Wf4LAMTMY8Bz/y8AEDIB2Of/AgAxM/l36b/bAAGAiLn8swHYIQAQMRP+PAAUAAiZCf/y8vJ3/y8AEHFe/z2HAEDAeQAoABAjABByvvs/zn2/AMDF3Qfg0eSfIQBwURuBZweAMwQALm6///doCABc2N7/dwYAQbP8n8kvABAkABC2E//+HYAdAgAXdR7+WQFAzN7+Oz8Acj8EAC5qJvhOfAGAi7q/9Tdmwj+b9OcQALiAMwL/uvhzPwQALuAMwKNPfz0bAgAXMiF4NNGfDQGACzlP/p89+z+HAMCFzArgfyb+DgGAC7EFgKg9CHQICEECAGEbgGcfAH00BAAu6P4WoKvAEHKuArwMBDHnh0D/9VhQAOCiZoLPX34BgKDZBuzy/1kEBAAuSgAgbF8LFgAI+p9rwQIAF/bs8d8OAYALOq8F7zmAAEDMeRAoABCxK4C9ECQAELIB2INAAYCQMwAz+QUAovYcQAAgSAAgbH8iXAAgaM4BZhUgABAmABA2E362AnMesGcCAgARew5wHggKAEQ8+ly4AEDEo4NAAYCIeRy4y//dDggAROx7AQIAQQIAcXsQKAAQsm8H3h8ECgAEbADOXwwSAIjYAJznAAIAQbv/FwAI2VWAAEDQBuC8EiwAELCTf8z/NwICAAEbgP13fzdQACBEACDsXAkIAITN0wABgKg5CBQAiJr3AgQAouYcQAAgTAAgTAAgTAAgTAAgTAAgylMACBMAiBMACBMACBMAiHIGAGECAGECAHECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAGECAFm32294rBXNq+ylSgAAAABJRU5ErkJggg=="/>
+</defs>
+<style type="text/css" id="gwmstyles"><![CDATA[
+.GWMLine
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMLine-H-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMLine-S-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill
+{
+stroke:#000000;
+fill:#ff0000;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMFill-H-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill-S-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+]]></style>
+<mask id="gwmmask">
+<rect id="gwmmaskrect" x="0" y="0" width="256" height="256" style="fill:white;"/>
+</mask>
+<g id="_GWMAll" gmwmsvg:typ="a" mask="url(#gwmmask)">
+<metadata><gmwmsvg:metadata id="_GWMMetadata" gmwmsvg:storageoffsetx="-848756.762078598140000" gmwmsvg:storageoffsety="4972687.312120427400000" gmwmsvg:storagetoreadoutscale="1.000000000000000" gmwmsvg:readoutoffsetx="0.000000000000000" gmwmsvg:readoutoffsety="0.000000000000000" gmwmsvg:readoutunit="m" gmwmsvg:storagetodistancescale="1.000000000000000" gmwmsvg:distanceunit="m" gmwmsvg:displaytostoragescale="0.104661316373358" gmwmsvg:rotationangle="0.000000000000000" gmwmsvg:version="2.0"/></metadata>
+<rect id="gwmbg" x="-2560" y="-2560" width="5376" height="5376" style="fill:#ffffff;stroke:none;opacity:0.000000000000000;"/>
+<g id="11" gmwmsvg:typ="l">
+<use xlink:href="#ICNyvHxbb" id="CNyvHxbb.0"/>
+</g>
+</g>
+</svg>

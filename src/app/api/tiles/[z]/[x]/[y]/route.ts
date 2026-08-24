@@ -19,6 +19,10 @@ export async function GET(
     });
   }
 
+  if (process.env.VERCEL) {
+    return new NextResponse(null, { status: 404 });
+  }
+
   if (pending.has(tilePath)) {
     try {
       await pending.get(tilePath);
