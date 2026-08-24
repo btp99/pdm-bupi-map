@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xml:space="preserve" id="gwmroot" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmwmsvg="http://www.intergraph.com/GeoMedia/wmsvg" style="stroke-linejoin:round">
+<script type="text/javascript" id="gwmlegendscript"><![CDATA[
+var _GWMLegendDisplayOrder = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", locatable :true, leaf : true, hotspot : false, members : [
+]}
+];
+var _GWMLegendGroup = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", members : [
+]}
+];
+]]></script>
+<defs id="gwmdefs">
+<image width="256" height="256" id="IDCRrRobb" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASNSURBVHhe7d3ZbttIFEBB/f8He7cTiEAHbU5bkBNphplTBMoPVlPLwz3gYkOnH3/h9v7+/svLy8vm6ekJ+CYBgLC7B+Dj4+Mffncb+7++vv4yPsjj4+Nm/nDPz8+b/Zr9OqgSAAg7XADGmvkwf3+4Pwb7q+H+ashX+0GZAECYAEDY3QNw7TYG/+3tbTOGfR74h4eHzeqDDJdCMD/nvA9UCQCE3T0AY6DPLm1jzepNAvchABD2n54CrC7wrd4kcB8CAGECAGF/FIBx5X7l0jbO98fQz4O/v3IP3I8AQNhvBeCaIV9t43B/3Ncfwz5bvUngPgQAwq4OwBj67w7+ONyfD/kvDf6Iw/wm92uA2xAACBMACLtbAPbn+/NQrwZ6XjevPRMAuA8BgLCbB2B/uL960RUBgH+fAEDYTQIwPzYG39DC8QkAhAkAhG0BmAf4bLWNx8Y5/tn4co6vzt2BYxMACLv6FGDc1x9DPw/+eLJx2D+bXww4FgGAsGUA5tOB/eCPoV8N/vzEwPEJAIQJAIR9CsAY+nnIvxr21cDP68ffA+zXAMchABB2Og/8/r7++BLOs3ngV0N/Ng/+3mo9cAwCAGGn+cLe+OV+6OfBn4f7O/sBxyMAECYAEHZaDfC8YNgP/bzfMA/+pecCjkEAIOx0/nGrob0mEsBxCACEnW4x+MDfSQAgTAAgbAvA6gHg/08AIGy7CzC4cg8tAgBhAgBhAgBhAgBhAgBhAgBhnwIAtAgAhG0BmP8fwF8GQocAQJgAQNinfwcWAGgRAAhzFwDCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBADCBACynn78BMwOi6Jg/pFZAAAAAElFTkSuQmCC"/>
+</defs>
+<style type="text/css" id="gwmstyles"><![CDATA[
+.GWMLine
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMLine-H-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMLine-S-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill
+{
+stroke:#000000;
+fill:#ff0000;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMFill-H-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill-S-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+]]></style>
+<mask id="gwmmask">
+<rect id="gwmmaskrect" x="0" y="0" width="256" height="256" style="fill:white;"/>
+</mask>
+<g id="_GWMAll" gmwmsvg:typ="a" mask="url(#gwmmask)">
+<metadata><gmwmsvg:metadata id="_GWMMetadata" gmwmsvg:storageoffsetx="-848145.265852317210000" gmwmsvg:storageoffsety="4983388.496080350100000" gmwmsvg:storagetoreadoutscale="1.000000000000000" gmwmsvg:readoutoffsetx="0.000000000000000" gmwmsvg:readoutoffsety="0.000000000000000" gmwmsvg:readoutunit="m" gmwmsvg:storagetodistancescale="1.000000000000000" gmwmsvg:distanceunit="m" gmwmsvg:displaytostoragescale="0.837290530988137" gmwmsvg:rotationangle="0.000000000000000" gmwmsvg:version="2.0"/></metadata>
+<rect id="gwmbg" x="-2560" y="-2560" width="5376" height="5376" style="fill:#ffffff;stroke:none;opacity:0.000000000000000;"/>
+<g id="11" gmwmsvg:typ="l">
+<use xlink:href="#IDCRrRobb" id="DCRrRobb.0"/>
+</g>
+</g>
+</svg>

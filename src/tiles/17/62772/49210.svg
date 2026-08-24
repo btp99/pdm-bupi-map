@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ServiceException code=""><![CDATA[An unexpected error occurred. Original message: 'The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT))']]></ServiceException></ServiceExceptionReport>

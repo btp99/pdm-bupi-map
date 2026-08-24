@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xml:space="preserve" id="gwmroot" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmwmsvg="http://www.intergraph.com/GeoMedia/wmsvg" style="stroke-linejoin:round">
+<script type="text/javascript" id="gwmlegendscript"><![CDATA[
+var _GWMLegendDisplayOrder = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", locatable :true, leaf : true, hotspot : false, members : [
+]}
+];
+var _GWMLegendGroup = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", members : [
+]}
+];
+]]></script>
+<defs id="gwmdefs">
+<image width="256" height="256" id="IcOJdIBbb" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUlSURBVHhe7d3BTltXFIVhP00aRQZKEVH6ZB2EADakj9kgIiAhpFWfwIXBqe712VWrKoBy1jf4RrbkPVn/wLrSXVyf7m6uVsvOp/XuzB/rvc6fR8vO3S8/zNye7HRuVsBT+Xz6zwQABlcNvxEAGFw1/Gbx+8mbzdej3pejw5nb497N+qfOp/dz1+udTnUk8Diq4TcCAIOrht8IAAyuGn4jADC4aviNAMDgquE3i9u3rzdf3v7cuX33Zub69LDz4ezHzm/nuzNX94PfVh0JPI5q+I0AwOCq4TcCAIOrht8IAAyuGn6zeBjyx/VB5/Jsf+bifGdGAOD7UA2/+d8BePDh12Xn4v2cAMDzqobfCAAMrhp+IwAwuGr4jQDA4KrhN4uHQV6eLzvbQ754/6pzed77uMWTgPC8quE3ZQD68T8QAPgeVcNvBAAGVw2/EQAYXDX85psGYHv8AgDPrxp+s7hZv9hcn2172Vs/jHnuZrXcUh8APJ9q+I0AwOCq4TcCAIOrht8IAAyuGn6zuF292DQCAOOpht/MAvC305eFV73ipR/bqh+tjgQeR7XBRgBgcNUGGwGAwVUbbAQABldtsFncHe9tvnZ2CsvO3clcFYnqR6sjgW+v2t+UAMDAqv1NCQAMrNrflADAwKr9TQkADKza39Ti7t3h5u74YMt+72Sn04191eufFvTEIDyVavRTAgADq0Y/JQAwsGr0UwIAA6tGPyUAMLBq9FOLz8evNzenhzPXq4PCXm+9/FfVUcDTqEY/JQAwsGr0UwIAA6tGPyUAMLBq9FOLavBX6/3CXmHrxZ9ny473AsDzqUY/JQAwsGr0UwIAA6tGPyUAMLBq9FMCAAOrRj+1uFnt3X9xrv7Hvx/yf1EdBTyNavRTAgADq0Y/JQAQTAAgmABAsPsA1B8A4xMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAAQTAAgmABBMACCYAEAwAYBgAgDBBACCCQAEEwAIJgAQTAAgmABAMAGAYAIAwQQAggkABBMACCYAEEwAIJgAQDABgGACAMEEAIIJAMTa2fwFPx8uHBMQVSUAAAAASUVORK5CYII="/>
+</defs>
+<style type="text/css" id="gwmstyles"><![CDATA[
+.GWMLine
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMLine-H-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMLine-S-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill
+{
+stroke:#000000;
+fill:#ff0000;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMFill-H-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill-S-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+]]></style>
+<mask id="gwmmask">
+<rect id="gwmmaskrect" x="0" y="0" width="256" height="256" style="fill:white;"/>
+</mask>
+<g id="_GWMAll" gmwmsvg:typ="a" mask="url(#gwmmask)">
+<metadata><gmwmsvg:metadata id="_GWMMetadata" gmwmsvg:storageoffsetx="-847380.895569462330000" gmwmsvg:storageoffsety="4982012.629571218000000" gmwmsvg:storagetoreadoutscale="1.000000000000000" gmwmsvg:readoutoffsetx="0.000000000000000" gmwmsvg:readoutoffsety="0.000000000000000" gmwmsvg:readoutunit="m" gmwmsvg:storagetodistancescale="1.000000000000000" gmwmsvg:distanceunit="m" gmwmsvg:displaytostoragescale="1.674581061976274" gmwmsvg:rotationangle="0.000000000000000" gmwmsvg:version="2.0"/></metadata>
+<rect id="gwmbg" x="-2560" y="-2560" width="5376" height="5376" style="fill:#ffffff;stroke:none;opacity:0.000000000000000;"/>
+<g id="11" gmwmsvg:typ="l">
+<use xlink:href="#IcOJdIBbb" id="cOJdIBbb.0"/>
+</g>
+</g>
+</svg>

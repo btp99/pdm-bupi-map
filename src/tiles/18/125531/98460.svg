@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xml:space="preserve" id="gwmroot" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmwmsvg="http://www.intergraph.com/GeoMedia/wmsvg" style="stroke-linejoin:round">
+<script type="text/javascript" id="gwmlegendscript"><![CDATA[
+var _GWMLegendDisplayOrder = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", locatable :true, leaf : true, hotspot : false, members : [
+]}
+];
+var _GWMLegendGroup = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", members : [
+]}
+];
+]]></script>
+<defs id="gwmdefs">
+<image width="256" height="256" id="IAH9g0Dbb" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR7SURBVHhe7d3LUuJAAEBR/v+DUfAxU7iwxrYpYkSccE+qzsakqbDou2jTYfdnY8fLy8snx+Pxg4eHh0UOh8NFs3GPj49wFzYXgKenp09mk3Q0+/JQJwAQJgAQJgAQJgAQtrkAzFbq9/v9B7MvOhs3u260dhxsgQBcsHYcbIEAXLB2HGyBAFywdhxswXsAXl9fP1h7jJ/znc+a3fBvEQDukQBAmABAmABAmABA2H8TgNk239kNA9cjABAmABAmABD2HoBrHQIA23H1ACw9xkjMtvnObhi4HgGAMAGAMAGAsLMBGCfoOWuP5+fnD/7dbWfXHdyGAECYAECYAECYAEDYTQIwG2fFH36fAECYAECYAECYAEDYTQIwrvjPVv39oCfcngBAmABAmABA2NUDMLvmeDx+MrsZ4LYEAMIEAMIEAMIEAMK+FIAlx+z9/uOK/2zVf3ZzwM8SAAgTAAgTAAgTAAh7D8CayX461m7rHYMwuwb4WW8BGCe/AECDAECYAEDY2UXA2TELhQDAdn0rAOPkFwDYFgGAMAGAsF8JwDj5BQB+x5cCcOm9fucm8pJrxicDPR0IP08AIEwAIEwAIEwAIOxsAMYV/5O17/UTAPg/CQCECQCECQCEnQ3AuOA3W/RbOmnHcbNrln4WcD0CAGECAGECAGECAGFvAZit+K/d6gtshwBAmABAmABAmABA2FsAlqz4nyxZpZ+Nm103WjsOWE8AIEwAIEwAIOwtAOM233NbfccAzCbqvxN4dv6cteOA9a4SgEtmnzVaeg/A9QgAhAkAhAkAhO1OK/6zE8D9EwAIEwAIEwAIEwAI29nmC10CAGECAGECAGE7T9xBlwBAmABAmABAmABA2G72R6BBACBMACBMACBMACBsd3q33+wEcP8EAMIEAMIEAMIEAMIEAMIEAMIEAMIEAMI8CQhhAgBhAgBhAgBhAgBhAgBhAgBhAgBhAgBhAgBhu8PhMD0B3D8BgDABgDABgDABgDABgDABgDABgDABgDBPAkKYAECYAECYAECYAECYHwaBMAGAMAGAMAGAsN1+v5+eAO6fAECYAECYAECYAECY/wJAmABAmABAmABAmABAmO3AECYAECYAECYAEOZ3ASBMACBMACBMACBMACDMfwEgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAgTAAg6/HPX68x35Zc9quaAAAAAElFTkSuQmCC"/>
+</defs>
+<style type="text/css" id="gwmstyles"><![CDATA[
+.GWMLine
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMLine-H-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMLine-S-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill
+{
+stroke:#000000;
+fill:#ff0000;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMFill-H-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill-S-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+]]></style>
+<mask id="gwmmask">
+<rect id="gwmmaskrect" x="0" y="0" width="256" height="256" style="fill:white;"/>
+</mask>
+<g id="_GWMAll" gmwmsvg:typ="a" mask="url(#gwmmask)">
+<metadata><gmwmsvg:metadata id="_GWMMetadata" gmwmsvg:storageoffsetx="-847075.147456321870000" gmwmsvg:storageoffsety="4985528.732872335200000" gmwmsvg:storagetoreadoutscale="1.000000000000000" gmwmsvg:readoutoffsetx="0.000000000000000" gmwmsvg:readoutoffsety="0.000000000000000" gmwmsvg:readoutunit="m" gmwmsvg:storagetodistancescale="1.000000000000000" gmwmsvg:distanceunit="m" gmwmsvg:displaytostoragescale="1.674581061976274" gmwmsvg:rotationangle="0.000000000000000" gmwmsvg:version="2.0"/></metadata>
+<rect id="gwmbg" x="-2560" y="-2560" width="5376" height="5376" style="fill:#ffffff;stroke:none;opacity:0.000000000000000;"/>
+<g id="11" gmwmsvg:typ="l">
+<use xlink:href="#IAH9g0Dbb" id="AH9g0Dbb.0"/>
+</g>
+</g>
+</svg>

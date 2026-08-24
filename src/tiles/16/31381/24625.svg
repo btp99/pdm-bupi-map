@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xml:space="preserve" id="gwmroot" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmwmsvg="http://www.intergraph.com/GeoMedia/wmsvg" style="stroke-linejoin:round">
+<script type="text/javascript" id="gwmlegendscript"><![CDATA[
+var _GWMLegendDisplayOrder = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", locatable :true, leaf : true, hotspot : false, members : [
+]}
+];
+var _GWMLegendGroup = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", members : [
+]}
+];
+]]></script>
+<defs id="gwmdefs">
+<image width="256" height="256" id="IsR9xArbb" xlink:href="data:image/png;base64,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"/>
+</defs>
+<style type="text/css" id="gwmstyles"><![CDATA[
+.GWMLine
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMLine-H-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMLine-S-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill
+{
+stroke:#000000;
+fill:#ff0000;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMFill-H-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill-S-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+]]></style>
+<mask id="gwmmask">
+<rect id="gwmmaskrect" x="0" y="0" width="256" height="256" style="fill:white;"/>
+</mask>
+<g id="_GWMAll" gmwmsvg:typ="a" mask="url(#gwmmask)">
+<metadata><gmwmsvg:metadata id="_GWMMetadata" gmwmsvg:storageoffsetx="-848145.265852317210000" gmwmsvg:storageoffsety="4979413.770609524100000" gmwmsvg:storagetoreadoutscale="1.000000000000000" gmwmsvg:readoutoffsetx="0.000000000000000" gmwmsvg:readoutoffsety="0.000000000000000" gmwmsvg:readoutunit="m" gmwmsvg:storagetodistancescale="1.000000000000000" gmwmsvg:distanceunit="m" gmwmsvg:displaytostoragescale="0.418645265491518" gmwmsvg:rotationangle="0.000000000000000" gmwmsvg:version="2.0"/></metadata>
+<rect id="gwmbg" x="-2560" y="-2560" width="5376" height="5376" style="fill:#ffffff;stroke:none;opacity:0.000000000000000;"/>
+<g id="11" gmwmsvg:typ="l">
+<use xlink:href="#IsR9xArbb" id="sR9xArbb.0"/>
+</g>
+</g>
+</svg>

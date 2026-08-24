@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xml:space="preserve" id="gwmroot" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gmwmsvg="http://www.intergraph.com/GeoMedia/wmsvg" style="stroke-linejoin:round">
+<script type="text/javascript" id="gwmlegendscript"><![CDATA[
+var _GWMLegendDisplayOrder = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", locatable :true, leaf : true, hotspot : false, members : [
+]}
+];
+var _GWMLegendGroup = [
+{name : "11", title : "Planta de Condicionantes - 2.6 - Perigosidade de Inc&#x00EA;ndio Rural", members : [
+]}
+];
+]]></script>
+<defs id="gwmdefs">
+<image width="256" height="256" id="IN3Rl2cbb" xlink:href="data:image/png;base64,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"/>
+</defs>
+<style type="text/css" id="gwmstyles"><![CDATA[
+.GWMLine
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMLine-H-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMLine-S-
+{
+stroke:#000000;
+fill:none;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill
+{
+stroke:#000000;
+fill:#ff0000;
+opacity:0;
+stroke-width:1px;
+pointer-events:visiblePainted;}
+.GWMFill-H-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+.GWMFill-S-
+{
+stroke:#000000;
+fill:#000000;
+opacity:0;
+stroke-width:1px;
+pointer-events:none;}
+]]></style>
+<mask id="gwmmask">
+<rect id="gwmmaskrect" x="0" y="0" width="256" height="256" style="fill:white;"/>
+</mask>
+<g id="_GWMAll" gmwmsvg:typ="a" mask="url(#gwmmask)">
+<metadata><gmwmsvg:metadata id="_GWMMetadata" gmwmsvg:storageoffsetx="-847075.147456321870000" gmwmsvg:storageoffsety="4985681.606928905500000" gmwmsvg:storagetoreadoutscale="1.000000000000000" gmwmsvg:readoutoffsetx="0.000000000000000" gmwmsvg:readoutoffsety="0.000000000000000" gmwmsvg:readoutunit="m" gmwmsvg:storagetodistancescale="1.000000000000000" gmwmsvg:distanceunit="m" gmwmsvg:displaytostoragescale="1.674581061976274" gmwmsvg:rotationangle="0.000000000000000" gmwmsvg:version="2.0"/></metadata>
+<rect id="gwmbg" x="-2560" y="-2560" width="5376" height="5376" style="fill:#ffffff;stroke:none;opacity:0.000000000000000;"/>
+<g id="11" gmwmsvg:typ="l">
+<use xlink:href="#IN3Rl2cbb" id="N3Rl2cbb.0"/>
+</g>
+</g>
+</svg>
