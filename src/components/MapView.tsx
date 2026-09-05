@@ -5,18 +5,7 @@ import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
 
 import { useEffect, useRef, useState } from 'react';
-
-const WMS_LAYERS = [
-  'ran', 'ren', 'trocoaltatensao', 'trocomediatensao',
-  'condutaadutora_adutoradistribuidora', 'espacosagricolasdeproducao',
-  'espacosurbanosdebaixadensidade1', 'espacosurbanosdebaixadensidade2',
-  'espacosverdes', 'espacosdeatividadeseconomicas', 'espacoderecursosgeologicos',
-  'espacoderecursosgeologicos_CM', 'espacoderecursosgeologicos_U',
-  'espacoderecursosgeologicos_R', 'espacosdeusosmultiplos',
-  'estruturaecologicamunicipal', 'linhasdeagua',
-];
-
-const WMS_BASE = 'https://sig.cm-aguiardabeira.pt/0901/qgis_mapserv.fcgi?';
+import { DEFAULT_MUNICIPALITY_ID, MUNICIPALITIES } from '@/config/municipalities';
 
 export default function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,12 +17,23 @@ export default function MapView() {
   const localTilesRef = useRef<any>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const highlightRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const layerControlRef = useRef<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const bupiLayersRef = useRef<{ cadastro: any; ortos: any; labels: any } | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const pdmLayersRef = useRef<Record<string, any>>({});
 
   const [opacity, setOpacity] = useState(0.7);
   const [tilesVisible, setTilesVisible] = useState(true);
   const [processId, setProcessId] = useState('');
   const [searchResult, setSearchResult] = useState('');
+  const [municipalityId, setMunicipalityId] = useState(DEFAULT_MUNICIPALITY_ID);
+  const [mapReady, setMapReady] = useState(false);
+  const [bupiFilterInput, setBupiFilterInput] = useState('');
+  const [bupiFilterActive, setBupiFilterActive] = useState<number | null>(null);
 
+  // Initialize map once (no PDM layers — those are set up in the second effect)
   useEffect(() => {
     if (mapRef.current || !containerRef.current) return;
     let cancelled = false;
@@ -53,32 +53,20 @@ export default function MapView() {
         shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
       });
 
+      const defaultMunicipality = MUNICIPALITIES.find((m) => m.id === DEFAULT_MUNICIPALITY_ID)!;
+
       const map = L.map(containerRef.current!, {
-        center: [40.816, -7.544],
-        zoom: 13,
+        center: defaultMunicipality.center,
+        zoom: defaultMunicipality.zoom,
         minZoom: 13,
         maxZoom: 17,
       });
       mapRef.current = map;
 
-      const satellite = L.tileLayer(
+      L.tileLayer(
         'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
         { attribution: 'Tiles © Esri' },
       ).addTo(map);
-
-      const overlayLayers: Record<string, ReturnType<typeof L.tileLayer.wms>> = {};
-      WMS_LAYERS.forEach((name) => {
-        overlayLayers[name.toUpperCase()] = L.tileLayer.wms(WMS_BASE, {
-          layers: name,
-          format: 'image/png',
-          transparent: true,
-          version: '1.3.0',
-          crs: L.CRS.EPSG3857,
-          map: 'pdm_db.qgs',
-          updateWhenZooming: false,
-          keepBuffer: 2,
-        });
-      });
 
       if (cancelled) { map.remove(); mapRef.current = null; return; }
 
@@ -88,7 +76,7 @@ export default function MapView() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const bupiCadastro = (esri as any).featureLayer({
         url: 'https://geo.bupi.gov.pt/gisbupi/rest/services/opendata/RGG_DadosGovPT/MapServer/0',
-        style: { color: '#e8630a', weight: 1.5, fillOpacity: 0 },
+        style: { color: '#ff6b00', weight: 2.5, fillColor: '#ff6b00', fillOpacity: 0.08 },
         minZoom: 15,
         attribution: '© BUPI / DGTERRITÓRIO',
       });
@@ -108,6 +96,21 @@ export default function MapView() {
         `;
       });
 
+      // Show hectare tooltip on hover for each parcel
+      bupiCadastro.on('load', () => {
+        bupiCadastro.eachLayer((layer: any) => {
+          if (layer.getTooltip()) return;
+          const area = layer.feature?.properties?.['st_area(shape)'];
+          if (area) {
+            layer.bindTooltip((area / 10000).toFixed(2) + ' ha', {
+              sticky: true,
+              direction: 'top',
+              offset: [0, -4],
+            });
+          }
+        });
+      });
+
       const bupiOrtos = L.tileLayer.wms(
         'https://cartografia.dgterritorio.gov.pt/wms/ortos2018',
         {
@@ -122,22 +125,20 @@ export default function MapView() {
         },
       );
 
-      L.control
-        .layers(
-          { Satellite: satellite },
-          {
-            ...overlayLayers,
-            'BUPI — Parcelas Cadastrais': bupiCadastro,
-            'BUPI — Ortofotos 2018': bupiOrtos,
-          },
-          { collapsed: true },
-        )
-        .addTo(map);
+      // Labels overlay (parishes, cities, villages) — always on top via high zIndex
+      const labels = L.tileLayer(
+        'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
+        {
+          attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+          subdomains: 'abcd',
+          opacity: 0.9,
+          zIndex: 650,
+        },
+      );
 
-      overlayLayers['RAN']?.addTo(map);
-      overlayLayers['REN']?.addTo(map);
+      bupiLayersRef.current = { cadastro: bupiCadastro, ortos: bupiOrtos, labels };
 
-      // Local tiles via Next.js API route (reutiliza cache existente)
+      // Local tiles for Aguiar da Beira fire hazard layer
       const localTiles = L.tileLayer('/api/tiles/{z}/{x}/{y}', {
         maxZoom: 18,
         minZoom: 13,
@@ -216,6 +217,8 @@ export default function MapView() {
           layer.bindTooltip(content, { permanent: true, direction: 'center' }).openTooltip();
         }
       });
+
+      if (!cancelled) setMapReady(true);
     };
 
     init().catch(console.error);
@@ -226,6 +229,88 @@ export default function MapView() {
       mapRef.current = null;
     };
   }, []);
+
+  // Update PDM layers and layer control whenever municipality changes (or map becomes ready)
+  useEffect(() => {
+    if (!mapReady || !lRef.current || !mapRef.current || !bupiLayersRef.current) return;
+    const L = lRef.current;
+    const map = mapRef.current;
+    const { cadastro, ortos, labels } = bupiLayersRef.current;
+
+    const municipality = MUNICIPALITIES.find((m) => m.id === municipalityId);
+    if (!municipality) return;
+
+    // Remove previous layer control and PDM layers
+    layerControlRef.current?.remove();
+    Object.values(pdmLayersRef.current).forEach((layer) => {
+      if (map.hasLayer(layer)) map.removeLayer(layer);
+    });
+
+    // Build new PDM overlay layers
+    const overlayLayers: Record<string, ReturnType<typeof L.tileLayer.wms>> = {};
+    municipality.pdmLayers.forEach((def) => {
+      const layer = L.tileLayer.wms(def.wmsBase, {
+        ...def.wmsOptions,
+        crs: L.CRS.EPSG3857,
+        updateWhenZooming: false,
+        keepBuffer: 2,
+      });
+      overlayLayers[def.label] = layer;
+      if (def.defaultOn) layer.addTo(map);
+    });
+    pdmLayersRef.current = overlayLayers;
+
+    // Labels layer: add to map on first load; preserve user toggle on municipality switch
+    if (!map.hasLayer(labels)) labels.addTo(map);
+
+    // Rebuild layer control with new PDM layers + permanent layers
+    layerControlRef.current = L.control
+      .layers(
+        {},
+        {
+          ...overlayLayers,
+          'Nomes de lugares': labels,
+          'BUPI — Parcelas Cadastrais': cadastro,
+          'BUPI — Ortofotos 2018': ortos,
+        },
+        { collapsed: true },
+      )
+      .addTo(map);
+
+    // Show/hide local fire hazard tiles based on municipality support
+    const localTiles = localTilesRef.current;
+    if (localTiles) {
+      if (municipality.hasLocalTiles) {
+        if (!map.hasLayer(localTiles)) map.addLayer(localTiles);
+      } else {
+        if (map.hasLayer(localTiles)) map.removeLayer(localTiles);
+      }
+    }
+
+    // Pan to municipality center
+    map.setView(municipality.center, municipality.zoom);
+  }, [mapReady, municipalityId]);
+
+  // Apply BUPI server-side area filter whenever bupiFilterActive changes
+  useEffect(() => {
+    const cadastro = bupiLayersRef.current?.cadastro;
+    if (!cadastro) return;
+    const where =
+      bupiFilterActive !== null
+        ? `st_area(shape) >= ${bupiFilterActive * 10000}`
+        : '1=1';
+    cadastro.setWhere(where);
+  }, [bupiFilterActive]);
+
+  const applyBupiFilter = () => {
+    const val = parseFloat(bupiFilterInput);
+    setBupiFilterActive(isNaN(val) || val <= 0 ? null : val);
+  };
+
+  const clearBupiFilter = () => {
+    setBupiFilterInput('');
+    setBupiFilterActive(null);
+  };
 
   const handleOpacity = (val: number) => {
     setOpacity(val);
@@ -301,6 +386,8 @@ export default function MapView() {
     setSearchResult('');
   };
 
+  const currentMunicipality = MUNICIPALITIES.find((m) => m.id === municipalityId);
+
   return (
     <div style={{ position: 'relative', height: '100%', width: '100%' }}>
       <div ref={containerRef} style={{ height: '100%', width: '100%' }} />
@@ -318,24 +405,52 @@ export default function MapView() {
           minWidth: 220,
         }}
       >
-        <label style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14 }}>
-          Opacidade:
-          <input
-            type="range"
-            min={0}
-            max={1}
-            step={0.1}
-            value={opacity}
-            onChange={(e) => handleOpacity(parseFloat(e.target.value))}
-          />
-        </label>
+        <div style={{ marginBottom: 8 }}>
+          <label style={{ fontSize: 12, color: '#666', display: 'block', marginBottom: 3 }}>
+            Município
+          </label>
+          <select
+            value={municipalityId}
+            onChange={(e) => setMunicipalityId(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '4px 6px',
+              border: '1px solid #ccc',
+              borderRadius: 3,
+              fontSize: 13,
+              cursor: 'pointer',
+            }}
+          >
+            {MUNICIPALITIES.map((m) => (
+              <option key={m.id} value={m.id}>
+                {m.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        <button
-          onClick={handleToggle}
-          style={{ marginTop: 6, padding: '4px 8px', cursor: 'pointer', fontSize: 13 }}
-        >
-          {tilesVisible ? 'Ocultar Imagem' : 'Mostrar Imagem'}
-        </button>
+        {currentMunicipality?.hasLocalTiles && (
+          <>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14 }}>
+              Opacidade:
+              <input
+                type="range"
+                min={0}
+                max={1}
+                step={0.1}
+                value={opacity}
+                onChange={(e) => handleOpacity(parseFloat(e.target.value))}
+              />
+            </label>
+
+            <button
+              onClick={handleToggle}
+              style={{ marginTop: 6, padding: '4px 8px', cursor: 'pointer', fontSize: 13 }}
+            >
+              {tilesVisible ? 'Ocultar Imagem' : 'Mostrar Imagem'}
+            </button>
+          </>
+        )}
 
         <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid #ddd' }}>
           <div style={{ fontWeight: 'bold', fontSize: 13, marginBottom: 5 }}>
@@ -374,6 +489,51 @@ export default function MapView() {
               {searchResult}
             </div>
           )}
+
+          <div style={{ marginTop: 8, paddingTop: 8, borderTop: '1px solid #eee' }}>
+            <div style={{ fontSize: 12, color: '#666', marginBottom: 4 }}>
+              Filtrar por área mínima
+            </div>
+            <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+              <span style={{ fontSize: 13 }}>≥</span>
+              <input
+                type="number"
+                min={0}
+                step={0.1}
+                value={bupiFilterInput}
+                onChange={(e) => setBupiFilterInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && applyBupiFilter()}
+                placeholder="ha"
+                style={{
+                  padding: '4px 6px',
+                  width: 70,
+                  border: '1px solid #ccc',
+                  borderRadius: 3,
+                  fontSize: 13,
+                }}
+              />
+              <button
+                onClick={applyBupiFilter}
+                style={{ padding: '4px 8px', cursor: 'pointer', fontSize: 13 }}
+              >
+                Aplicar
+              </button>
+              {bupiFilterActive !== null && (
+                <button
+                  onClick={clearBupiFilter}
+                  style={{ padding: '4px 8px', cursor: 'pointer', fontSize: 13, color: '#c00' }}
+                  title="Remover filtro"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+            {bupiFilterActive !== null && (
+              <div style={{ marginTop: 4, fontSize: '0.8em', color: '#666' }}>
+                A mostrar parcelas ≥ {bupiFilterActive} ha
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
