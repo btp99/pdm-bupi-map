@@ -17,9 +17,13 @@ export interface MunicipalityConfig {
 
 const AGUIAR_WMS = 'https://sig.cm-aguiardabeira.pt/0901/qgis_mapserv.fcgi?';
 const TRANCOSO_WMS = 'https://sigamcb.wkt.pt/geoserver/cm_trancoso/wms';
+const FORNOS_WMS = 'https://sigamcb.wkt.pt/geoserver/cm_falgodres/wms';
+const AMCB_WMS = 'https://sigamcb.wkt.pt/geoserver/wms';
 
 const AGUIAR_BASE = { format: 'image/png', transparent: true, version: '1.3.0', map: 'pdm_db.qgs' };
 const TRANCOSO_BASE = { format: 'image/png', transparent: true, version: '1.3.0' };
+const FORNOS_BASE = { format: 'image/png', transparent: true, version: '1.3.0' };
+const AMCB_BASE = { format: 'image/png', transparent: true, version: '1.3.0' };
 
 function aguiar(layers: string, label: string, defaultOn?: boolean): WmsLayerDef {
   return { id: layers, label, wmsBase: AGUIAR_WMS, wmsOptions: { ...AGUIAR_BASE, layers }, defaultOn };
@@ -27,6 +31,14 @@ function aguiar(layers: string, label: string, defaultOn?: boolean): WmsLayerDef
 
 function trancoso(layers: string, label: string, styles: string, defaultOn?: boolean): WmsLayerDef {
   return { id: layers, label, wmsBase: TRANCOSO_WMS, wmsOptions: { ...TRANCOSO_BASE, layers, styles }, defaultOn };
+}
+
+function fornos(layers: string, label: string, defaultOn?: boolean): WmsLayerDef {
+  return { id: layers, label, wmsBase: FORNOS_WMS, wmsOptions: { ...FORNOS_BASE, layers }, defaultOn };
+}
+
+function amcb(layers: string, label: string, defaultOn?: boolean): WmsLayerDef {
+  return { id: layers, label, wmsBase: AMCB_WMS, wmsOptions: { ...AMCB_BASE, layers }, defaultOn };
 }
 
 export const MUNICIPALITIES: MunicipalityConfig[] = [
@@ -63,6 +75,7 @@ export const MUNICIPALITIES: MunicipalityConfig[] = [
     zoom: 13,
     hasLocalTiles: false,
     pdmLayers: [
+      amcb('amcb:Trancoso - Freguesias', 'Freguesias'),
       // Condicionantes
       trancoso('ran_final', 'RAN', 'Reserva_Agricola_Nacional', true),
       trancoso('REN_Trancoso', 'REN', 'default-style-REN_Trancoso', true),
@@ -100,6 +113,35 @@ export const MUNICIPALITIES: MunicipalityConfig[] = [
       trancoso('rpdm_trancoso_solo_urbano_qualific', 'Solo Urbano', 'solo_urbano'),
       trancoso('rpdm_trancoso_exp_rec_geologicos', 'Recursos Geológicos', 'Espacos_Exploracao_RecEnergeticos_Geologicos'),
       trancoso('estr_urba_con', 'Estrutura Urbana a Consolidar', 'Areas_Estrutura_Urbana_Consolidar'),
+    ],
+  },
+  {
+    id: 'fornos',
+    name: 'Fornos de Algodres',
+    center: [40.60, -7.55],
+    zoom: 13,
+    hasLocalTiles: false,
+    pdmLayers: [
+      amcb('amcb:Fornos Alg - Freguesias', 'Freguesias'),
+      // Condicionantes
+      fornos('ran_falgodres_site_new', 'RAN', true),
+      fornos('ren_1', 'REN', true),
+      fornos('rede_eletrica_PMEPC', 'Rede Elétrica'),
+      fornos('Redehidrografica_PMDFCI', 'Cursos de Água'),
+      fornos('hidro_2d_poligonos_10k', 'Planos de Água'),
+      fornos('arl_poligonos_10K', 'ARL'),
+      fornos('conduta_PMEPC', 'Conduta Adutora'),
+      fornos('fgc_fornos_algodres_2022', 'Faixas Gestão Combustível'),
+      fornos('pif0905_2022', 'Perigosidade de Incêndio'),
+      fornos('rpa_fornos_algodres_2022', 'RPA'),
+      fornos('rvf_fornos_algodres_2022', 'RVF'),
+      // Ordenamento
+      fornos('pdmfalg_pc', 'PDM — Condicionantes'),
+      fornos('pdmfalg_po', 'PDM — Ordenamento'),
+      fornos('agricola_poligonos_10K', 'Espaços Agrícolas'),
+      fornos('mato_poligonos_10k', 'Espaços Florestais'),
+      fornos('lazer_poligonos_10k', 'Espaços Verdes'),
+      fornos('industrial_poligonos_10k', 'Espaços Industriais'),
     ],
   },
 ];
