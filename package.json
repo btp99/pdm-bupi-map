@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3000"
   },
   "dependencies": {
+    "@turf/turf": "^7.4.0",
     "esri-leaflet": "^3.0.12",
     "leaflet": "^1.9.4",
     "leaflet-control-geocoder": "^2.4.0",
